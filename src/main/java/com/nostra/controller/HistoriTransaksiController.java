@@ -57,6 +57,21 @@ public class HistoriTransaksiController {
         return AbstractRequestHandler.constructListResult(pageMap);
     }
     
+    @RequestMapping(value = "/show-join-histori-transaksi",
+            method = RequestMethod.GET,
+            produces = MediaType.APPLICATION_JSON_VALUE)
+    @ResponseBody
+    public ResponseEntity<ResultPageVO> pageHistori(@RequestParam(value = "nama", required = false) String nama,
+    										 		@RequestParam(value = "noRekening", required = false) String noRekening,
+    										 		@RequestParam(value = "page", defaultValue = "0") Integer page,
+    										 		@RequestParam(value = "limit", defaultValue = "10") Integer limit,
+    										 		@RequestParam(value = "sortBy", required = false) String sortBy,
+    										 		@RequestParam(value = "direction", required = false) String direction
+    ) {
+        Map<String, Object> pageMap = historiTransaksiService.searchNative(nama, noRekening, page, limit, sortBy, direction);
+        return AbstractRequestHandler.constructListResult(pageMap);
+    }
+    
    
     
 }
