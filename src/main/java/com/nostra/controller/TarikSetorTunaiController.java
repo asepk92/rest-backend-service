@@ -8,14 +8,13 @@ import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import com.nostra.service.MasterUserService;
+
 import com.nostra.service.TarikSetorTunaiService;
-import com.nostra.vo.MasterUserVO;
-import com.nostra.vo.ResultPageVO;
+
 import com.nostra.vo.ResultVO;
 import com.nostra.vo.TarikSetorTunaiVO;
 
-import java.util.Map;
+
 
 
 
