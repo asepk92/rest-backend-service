@@ -4,7 +4,7 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.Data;
 
 /**
- * Created by fani on 4/23/15.
+ * Created by fani on 4/23/15
  */
 @Data
 @JsonInclude(JsonInclude.Include.NON_NULL)
